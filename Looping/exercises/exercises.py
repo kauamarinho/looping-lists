@@ -79,3 +79,90 @@ for nota in notas_avaliacao:
 valores_comissao = list(range(0, 51, 5))
 
 print(valores_comissao)
+
+
+# Exercise 7
+
+tentativas_conexao = [False, False, False, True, True]
+
+tentativas = 0
+limite_tentativas = 3
+
+while tentativas < len(tentativas_conexao):
+    print("Tentando conectar...")
+
+    sucesso = tentativas_conexao[tentativas]
+    tentativas += 1
+
+    if sucesso:
+        print("Conexão realizada com sucesso")
+        break
+
+    if tentativas >= limite_tentativas:
+        print("Conexão interrompida após limite de tentativas")
+        break
+
+
+# Exercise 8
+
+# Cenário A - Pedido urgente
+
+pedidos = ["P123", "P456", "P789"]
+pedido_a_substituir = "P456"
+prioridade_urgente = True
+pedido_urgente = "P999"
+
+if prioridade_urgente:
+    pedidos.insert(0, pedido_urgente)
+
+else:
+    if pedido_a_substituir in pedidos:
+        posicao = pedidos.index(pedido_a_substituir)
+        pedidos[posicao] = pedido_urgente
+
+    else:
+        print("Pedido a substituir não encontrado.")
+
+print("Fila final:", pedidos)
+
+
+# Cenário B - Não urgente e pedido existente
+
+pedidos = ["P123", "P456", "P789"]
+pedido_a_substituir = "P456"
+prioridade_urgente = False
+pedido_urgente = "P999"
+
+if prioridade_urgente:
+    pedidos.insert(0, pedido_urgente)
+
+else:
+    if pedido_a_substituir in pedidos:
+        posicao = pedidos.index(pedido_a_substituir)
+        pedidos[posicao] = pedido_urgente
+
+    else:
+        print("Pedido a substituir não encontrado.")
+
+print("Fila final:", pedidos)
+
+
+# Cenário C - Não urgente e pedido inexistente
+
+pedidos = ["P123", "P456", "P789"]
+pedido_a_substituir = "P111"
+prioridade_urgente = False
+pedido_urgente = "P999"
+
+if prioridade_urgente:
+    pedidos.insert(0, pedido_urgente)
+
+else:
+    if pedido_a_substituir in pedidos:
+        posicao = pedidos.index(pedido_a_substituir)
+        pedidos[posicao] = pedido_urgente
+
+    else:
+        print("Pedido a substituir não encontrado. A fila será mantida.")
+
+print("Fila final:", pedidos)

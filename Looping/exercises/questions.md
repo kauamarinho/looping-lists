@@ -73,6 +73,42 @@ Criar uma sequência de valores de comissão entre 0 e 50 reais, aumentando os v
 - Sequências numéricas
 - Definição de início, limite e passo
 
+
+## Exercício 7 — Controlar tentativas de conexão
+
+Criar um programa que controle tentativas de conexão com um servidor.
+
+O programa deve percorrer uma lista de resultados utilizando `while`, contar cada tentativa e interromper o processo caso sejam atingidas 3 tentativas sem sucesso.
+
+**Conceitos praticados:**
+- Listas
+- `while`
+- `if`
+- `break`
+- Contadores
+- Valores booleanos (`True` e `False`)
+- 
+
+## Exercício 8 — Reorganizar fila de pedidos
+
+Criar um programa para reorganizar uma lista de pedidos de acordo com a prioridade.
+
+Se o pedido for urgente, ele deve ser inserido no início da fila. Caso não seja urgente, o programa deve substituir um pedido existente pelo novo pedido.
+
+Também devem ser testados três cenários:
+
+- Pedido urgente.
+- Pedido não urgente com pedido a substituir existente.
+- Pedido não urgente com pedido a substituir inexistente.
+
+**Conceitos praticados:**
+- Listas
+- `if`, `elif` e `else`
+- Operador `in`
+- `insert()`
+- `index()`
+- Alteração de elementos por índice
+
 ## Conteúdos praticados
 
 Ao longo dos exercícios foram utilizados alguns dos principais fundamentos de Python:
